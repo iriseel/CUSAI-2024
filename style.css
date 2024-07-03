@@ -1,0 +1,94 @@
+@font-face {
+    font-family: jungka;
+    src: url(Jungka.otf); 
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    box-sizing:border-box;
+}
+
+body {
+    font-family: jungka, Times, serif;
+    font-weight: normal;
+    font-size: 16pt;
+    letter-spacing: 0.15px;
+    line-height:1.2em;
+    padding:1em;
+    background:lavender;
+    position:relative;
+}
+
+i {
+    font-style: italic;
+}
+
+.cap {
+    text-transform: uppercase;
+}
+
+.h1 {
+    font-size:2em;
+    margin-top:.4em;
+}
+
+.indent {
+    margin:0 4em;
+}
+
+body, .container {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    justify-items: center;
+}
+
+.container {
+    max-width:1000px;
+}
+
+section {
+    width:100%;
+}
+
+
+.grid-container {
+    display: grid;
+    grid-template-rows: auto auto;
+    /* Two rows */
+    grid-template-columns: 1fr;
+    /* Default to one column */
+}
+
+.row1 {
+    grid-column: 1 / -1;
+    /* Span across all columns */
+}
+
+.row2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* Three columns */
+}
+
+.row3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* Three columns */
+}
+
+
+.item {
+    padding: 1em;
+    border: 1px solid black;
+}
+
+.sub:not(:last-child) {
+    margin-bottom: 1em;
+}
+
+.row1:first-child {
+    color: lavender;
+    background: black;
+}
