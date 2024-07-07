@@ -1,0 +1,17 @@
+body {
+    font-size:48px;
+}
+
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    margin-left:1em;
+}
+
+.hidden {
+    display: none;
+}

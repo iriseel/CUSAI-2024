@@ -14,7 +14,7 @@ body {
     font-weight: normal;
     font-size: 16pt;
     letter-spacing: 0.15px;
-    line-height:1.2em;
+    line-height:1.3em;
     padding:1em;
     background:lavender;
     position:relative;
@@ -22,6 +22,14 @@ body {
 
 i {
     font-style: italic;
+}
+
+a {
+    color:blue;
+}
+
+a:visited {
+    color:blueviolet
 }
 
 .cap {
@@ -35,6 +43,19 @@ i {
 
 .indent {
     margin:0 4em;
+}
+
+ul {
+    padding:0;
+    margin:0;
+}
+
+li {
+    margin-left:1em;
+}
+
+underline {
+    text-decoration: underline;
 }
 
 body, .container {
@@ -84,7 +105,7 @@ section {
     border: 1px solid black;
 }
 
-.sub:not(:last-child) {
+.sub:not(:last-child), ul:not(:last-child) {
     margin-bottom: 1em;
 }
 
@@ -101,7 +122,7 @@ section {
 
 .flier>* {
     /* Adjust animation duration to change the element’s speed */
-    animation: fly 50s linear infinite;
+    animation: fly 100s linear infinite;
     pointer-events: none !important;
     top: 0;
     left: 0;

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cooper Union Summer Art Intensive</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="slides.css">
+</head>
+<body>
+    <div>So, what is graphic design?</div>
+
+    <img src="assets/type-image.jpg" class="hidden">
+
+    <div class="hidden">
+        (An incomplete list of) what graphic designers design…
+    </div>
+
+    <div class="hidden">
+        <ul>Print
+            <li>Ephemera</li>
+            <li>Posters</li>
+            <li>Publications</li>
+        </ul>
+        <div>Type Design </div>
+        <div>Wayfinding / Signage </div>
+        <div>Maps </div>
+        <ul>Identities
+            <li>Logos</li>
+            <li>Guidelines</li>
+            <li>Iconography</li>
+            <li>Systems</li>
+        </ul>
+        <div>Infographics </div>
+        <div>Motion Graphics </div>
+        <div>Exhibition Design </div>
+        <div>Packaging </div>
+        <div>Apparel </div>
+        <div>Web Design / UX, UI </div>
+    </div>
+
+    <div class="hidden">
+        <ul>Print
+            <li>Ephemera</li>
+        </ul>
+        <img src="assets/mexico-olympics-tix.jpg">
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            let currentElement = document.body.firstElementChild;
+
+            const showNextElement = () => {
+                if (currentElement) {
+                    const nextElement = currentElement.nextElementSibling;
+                    if (nextElement) {
+                        currentElement.classList.add('hidden');
+                        nextElement.classList.remove('hidden');
+                        currentElement = nextElement;
+                    }
+                }
+            };
+
+            const showPreviousElement = () => {
+                if (currentElement) {
+                    const previousElement = currentElement.previousElementSibling;
+                    if (previousElement) {
+                        currentElement.classList.add('hidden');
+                        previousElement.classList.remove('hidden');
+                        currentElement = previousElement;
+                    }
+                }
+            };
+
+            document.body.addEventListener('keydown', (event) => {
+                if (event.key === 'ArrowRight') {
+                    showNextElement();
+                } else if (event.key === 'ArrowLeft') {
+                    showPreviousElement();
+                }
+            });
+        });
+    </script>
+</body>
+</html>
