@@ -5,6 +5,13 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: jungka;
+    src: url(Jungka\ Bold.otf);
+    font-weight:bold;
+    font-style: normal;
+}
+
 * {
     box-sizing:border-box;
 }
