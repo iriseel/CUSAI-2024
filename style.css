@@ -189,4 +189,12 @@ underline {
             grid-template-columns: 1fr;
             row-gap:1em;
         }
+    .row3 {
+        grid-template-columns: 1fr;
+        /* Ensure single column layout on small screens */
+            row-gap:1em;
+    }
+    .indent {
+        margin: 0 0em;
+    }
 }
